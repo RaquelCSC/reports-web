@@ -3,7 +3,9 @@ import axios from 'axios'
 export default class Api {
   constructor() {
     this.api = axios.create({
-      baseURL: 'http://localhost:5000'
+      baseURL: process.env.NODE_ENV === 'production'
+        ? 'http://ec2-54-198-106-41.compute-1.amazonaws.com/:5000'
+        : 'http://localhost:5000'
     })
   }
 

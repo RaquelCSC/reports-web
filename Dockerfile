@@ -10,5 +10,5 @@ COPY . /app
 EXPOSE 3000
 WORKDIR /app
 
-ENTRYPOINT [ "yarn" ]
-CMD [ "start" ]
+# ENTRYPOINT [ "yarn" ]
+# CMD [ "start" ]
